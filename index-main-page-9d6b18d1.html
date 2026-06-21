@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>直播吧 · 入口与页面说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #fbfbfa;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+            color: #1e1e1e;
+            line-height: 1.7;
+            padding: 2.5rem 1.25rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page-wrap {
+            max-width: 640px;
+            width: 100%;
+        }
+
+        /* 标题层级 */
+        h1 {
+            font-size: 2.1rem;
+            font-weight: 500;
+            letter-spacing: -.01em;
+            margin-bottom: .45rem;
+            color: #1a1a1a;
+            line-height: 1.2;
+        }
+
+        .subhead {
+            font-size: .95rem;
+            color: #7a7a7a;
+            margin-bottom: 2.5rem;
+            font-weight: 380;
+            padding-bottom: .75rem;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 480;
+            margin-top: 2.6rem;
+            margin-bottom: .9rem;
+            color: #242424;
+            letter-spacing: .01em;
+        }
+
+        p {
+            margin-bottom: 1.3rem;
+            font-size: 1rem;
+            color: #2c2c2c;
+        }
+
+        /* 引用 / 提示 区块 */
+        .aside-note {
+            background-color: #f5f4f0;
+            border-left: 3px solid #c8c2b5;
+            padding: 1rem 1.3rem;
+            margin: 2rem 0 1.8rem 0;
+            font-size: .92rem;
+            color: #3b3b3b;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .aside-note strong {
+            font-weight: 520;
+            color: #1f1f1f;
+        }
+
+        /* 内联链接样式 */
+        a {
+            color: #2d5a7b;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color .15s, color .15s;
+            font-weight: 420;
+        }
+
+        a:hover {
+            color: #1a3d56;
+            border-bottom-color: #1a3d56;
+        }
+
+        /* 分隔装饰 */
+        .separator {
+            margin: 2.2rem 0 1.2rem;
+            font-size: .75rem;
+            color: #bbb;
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+        }
+
+        .separator span {
+            background-color: #f0efea;
+            padding: 0 .6rem;
+            border-radius: 10px;
+            color: #7f7f7f;
+        }
+
+        .separator-line {
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, #ddd, transparent);
+        }
+
+        /* 微列表 (FAQ 摘要风格) */
+        .faq-item {
+            margin-bottom: 1.6rem;
+        }
+
+        .faq-item .q {
+            font-weight: 480;
+            font-size: 1rem;
+            margin-bottom: .2rem;
+            color: #1f1f1f;
+        }
+
+        .faq-item .a {
+            font-size: .92rem;
+            color: #4a4a4a;
+            padding-left: .25rem;
+        }
+
+        .faq-item .a a {
+            font-weight: 420;
+        }
+
+        /* 响应式 */
+        @media (max-width: 500px) {
+            body {
+                padding: 1.5rem 1rem;
+            }
+
+            h1 {
+                font-size: 1.7rem;
+            }
+
+            .page-wrap {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrap">
+
+        <h1>直播吧 · 一处稳定的入口</h1>
+        <div class="subhead">关于页面、访问习惯与说明书式的短记</div>
+
+        <p>
+            从各种渠道寻找体育直播的入口，有时挺费神。比分快讯、赛程预告、社区讨论……信息散落在不同角落，而你想要的是一个不必翻找的地方。我大概从两三年前开始，把 <a href="https://index-main-zhibo8.com">直播吧</a> 当作一个默认的起点页面——不是因为它界面多华丽，而是它足够轻、足够直接。
+        </p>
+
+        <p>
+            这个页面没有复杂的跳转逻辑，也没有堆砌的推荐模块。打开之后，你能很快找到当天的重点赛事列表，以及几个常用的导航入口。对经常需要切着看比分、又不想开太多标签页的人来说，这种「少即是多」的设计反而更顺手。
+        </p>
+
+        <div class="aside-note">
+            <strong>一点观察：</strong> 很多同类站点喜欢把入口藏进多层菜单里，或者用大图轮播抢占首屏。<a href="https://index-main-zhibo8.com">直播吧</a> 的首页则更像一个安静的控制台：信息平铺开，不制造焦虑，也不催促你点击。这种克制在体育类页面里其实不多见。
+        </div>
+
+        <h2>页面说明 · 结构速览</h2>
+        <p>
+            从布局上看，首屏主要分为三个区域：顶部是常驻的导航条，包含联赛分类和工具入口；中间是今日赛程与实时比分卡片，按时间顺序排列；底部则留给了社区热帖和简要的数据看板。整个页面没有使用自动播放的视频或音频，加载压力很小，在移动端和慢速网络下也能较快呈现。
+        </p>
+        <p>
+            值得一提的是，它把「直播地址」和「文字直播」做了清晰的区分——没有混在一起。你如果只想看图文快讯，可以直接点文字流；如果想找视频源，也有对应的跳转按钮。这种分流设计减少了误触和无效等待。
+        </p>
+
+        <h2>几个常用场景</h2>
+        <p>
+            <strong>赛前确认时间：</strong> 有时候各大平台给出的开赛时间不一致，直接看 <a href="https://index-main-zhibo8.com">直播吧</a> 的赛事列表反而最准。它抓取的数据源相对统一，而且会标出「已确认」或「待定」的状态。<br>
+            <strong>赛后看评分与讨论：</strong> 每场比赛结束后，页面会快速更新球员评分和简短战报。你无需专门搜索，往下翻几屏就能找到对应的讨论串。<br>
+            <strong>多赛事并行：</strong> 周末晚上经常同时开打四五场，页面左侧的「多信号」功能可以让你在几个直播间之间快速切换，不用反复输入网址。
+        </p>
+
+        <div class="separator">
+            <span>﹒</span>
+            <span class="separator-line"></span>
+            <span>FAQ 摘要</span>
+            <span class="separator-line"></span>
+            <span>﹒</span>
+        </div>
+
+        <div class="faq-item">
+            <div class="q">为什么把 <a href="https://index-main-zhibo8.com">直播吧</a> 设为首页？</div>
+            <div class="a">因为它启动快、没有弹窗干扰，而且赛程排列符合看球习惯。对我来说，它像一本随手翻的赛事手册。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="q">页面会不会包含会员专享内容？</div>
+            <div class="a">目前来看，绝大多数赛事的文字直播和基础数据都是开放的。部分视频源可能跳转到第三方平台，但页面本身没有设置付费墙。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="q">移动端排版适配如何？</div>
+            <div class="a">页面采用了自适应布局，手机浏览器上会重新排列卡片顺序，比分和赛程依然清晰可读。唯一的不足是社区评论区在窄屏下字略小，但缩放一下就能解决。</div>
+        </div>
+
+        <p style="margin-top: 2.4rem; font-size: .88rem; color: #888; border-top: 1px solid #ececec; padding-top: 1.4rem;">
+            这篇简记写于一个普通的周末午后。没有夸张的描述，也没有必须收藏的呼吁。只是觉得，如果你恰好需要一个稳定、不折腾的体育信息起点，可以试试把 <a href="https://index-main-zhibo8.com">直播吧</a> 放在书签栏——或者，就像我一样，把它当作每次打开浏览器的第一站。
+        </p>
+
+    </div>
+</body>
+</html>
